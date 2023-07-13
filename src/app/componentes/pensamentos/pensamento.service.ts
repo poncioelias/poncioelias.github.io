@@ -1,6 +1,6 @@
 import { EditarPensamentoComponent } from './editar-pensamento/editar-pensamento.component';
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Pensamento } from './pensamento';
 import { Observable } from 'rxjs';
 
@@ -14,8 +14,17 @@ export class PensamentoService {
 
   constructor(private http: HttpClient ) { }
 
-  listar(): Observable<Pensamento[]> {
-    return this.http.get<Pensamento[]>(this.API)
+  listar(pagina: number): Observable<Pensamento[]> {
+    const itensPorPagina=3;
+
+    let params = new HttpParams()
+      .set('_page', pagina)
+      .set('_limit', itensPorPagina)
+
+    // return this.http.get<Pensamento[]>(`${this.API}?_page=${pagina}&_limit=${itensPorPagina}`)
+    return this.http.get<Pensamento[]>(`${this.API}?_page=${pagina}&_limit=${itensPorPagina}`)
+    return this.http.get<Pensamento[]>(this.API, { params })
+
   }
 
   criar(pensamento: Pensamento): Observable<Pensamento> {
