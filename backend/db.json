@@ -4,37 +4,43 @@
       "id": 1,
       "conteudo": "Texto do pensamento 1",
       "autoria": "Poncio Elias",
-      "modelo": "modelo1"
+      "modelo": "modelo1",
+      "favorito": true
     },
     {
       "id": 2,
       "conteudo": "Texto do pensamento 2",
       "autoria": "Poncio Elias",
-      "modelo": "modelo2"
+      "modelo": "modelo2",
+      "favorito": false
     },
     {
       "id": 3,
       "conteudo": "Texto do pensamento 3",
       "autoria": "Poncio Elias",
-      "modelo": "modelo3"
+      "modelo": "modelo3",
+      "favorito": false
     },
     {
       "conteudo": "Aprendendo Angular 4",
       "autoria": "Dev854",
       "modelo": "modelo2",
-      "id": 4
+      "id": 4,
+      "favorito": false
     },
     {
       "conteudo": "as asdfc",
       "autoria": "DevA|",
       "modelo": "modelo1",
-      "id": 5
+      "id": 5,
+      "favorito": false
     },
     {
       "conteudo": "a",
       "autoria": "ssss",
       "modelo": "modelo1",
-      "id": 6
+      "id": 6,
+      "favorito": false
     }
   ]
 }
